@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: rahulltelkaronemoreboard 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rahulltelkaronemoreboard 
+    spec:
+      containers:
+        - name: rahulltelkaronemoreboard 
+          image: rahulimageregistry.azurecr.io/rahulltelkaronemoreboard
+          ports:
+          - containerPort: 8080
